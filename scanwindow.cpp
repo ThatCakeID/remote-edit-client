@@ -1,6 +1,8 @@
 #include "scanwindow.h"
 #include "ui_scanwindow.h"
 #include "scan_item.h"
+#include <QProcess>
+#include <QMessageBox>
 
 ScanWindow::ScanWindow(QWidget *parent)
     : QWidget(parent)
@@ -22,6 +24,25 @@ void ScanWindow::on_scan_button_clicked() {
     toggle_scan();
 
     // TODO: Do some scanning here
+    QStringList parameters;
+ #if defined(WIN32)
+    parameters << "-n" << "1";
+ #else
+    parameters << "-c 1";
+ #endif
+
+    parameters << "google.com";
+
+    QProcess *process = new QProcess(this);
+
+    process->start("ping", parameters);
+    process->waitForReadyRead();
+
+    if (process->exitCode()==0) {
+        QMessageBox::information(this, "An error happened!", process->readAllStandardOutput());
+    } else {
+        QMessageBox::critical(this, "An error happened!", "We encountered an error while scanning for devices!");
+    }
 
     toggle_scan();
 
