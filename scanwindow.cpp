@@ -23,6 +23,8 @@ void ScanWindow::on_scan_button_clicked() {
 
     toggle_scan();
 
+    ui->scan_progress_bar->setValue(5);
+
     // TODO: Do some scanning here
     QStringList parameters;
  #if defined(WIN32)
@@ -33,17 +35,22 @@ void ScanWindow::on_scan_button_clicked() {
 
     parameters << "google.com";
 
+    ui->scan_progress_bar->setValue(10);
+
     QProcess *process = new QProcess(this);
 
     process->start("ping", parameters);
     process->waitForReadyRead();
 
-    if (process->exitCode()==0) {
+    ui->scan_progress_bar->setValue(20);
+
+    if (process->exitCode() == 0) {
         QMessageBox::information(this, "An error happened!", process->readAllStandardOutput());
     } else {
         QMessageBox::critical(this, "An error happened!", "We encountered an error while scanning for devices!");
     }
 
+    ui->scan_progress_bar->setValue(100);
     toggle_scan();
 
     ui->scan_result_table->setModel(model);

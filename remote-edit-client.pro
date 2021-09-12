@@ -9,15 +9,21 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    connectionmethod.cpp \
     main.cpp \
+    mainwindow.cpp \
     scan_item.cpp \
     scanwindow.cpp
 
 HEADERS += \
+    connectionmethod.h \
+    mainwindow.h \
     scan_item.h \
     scanwindow.h
 
 FORMS += \
+    connectionmethod.ui \
+    mainwindow.ui \
     scanwindow.ui
 
 TRANSLATIONS += \
