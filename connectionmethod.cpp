@@ -1,5 +1,7 @@
 #include "connectionmethod.h"
 #include "ui_connectionmethod.h"
+#include "mainwindow.h"
+#include <QStackedWidget>
 
 ConnectionMethod::ConnectionMethod(QWidget *parent) :
     QWidget(parent),
@@ -11,4 +13,9 @@ ConnectionMethod::ConnectionMethod(QWidget *parent) :
 ConnectionMethod::~ConnectionMethod()
 {
     delete ui;
+}
+
+void ConnectionMethod::on_direct_button_clicked()
+{
+    // TUDO: Switch screen (impossible)
 }

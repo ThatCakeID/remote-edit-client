@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     connectionmethod.cpp \
+    directserverconnect.cpp \
     main.cpp \
     mainwindow.cpp \
     scan_item.cpp \
@@ -17,12 +18,14 @@ SOURCES += \
 
 HEADERS += \
     connectionmethod.h \
+    directserverconnect.h \
     mainwindow.h \
     scan_item.h \
     scanwindow.h
 
 FORMS += \
     connectionmethod.ui \
+    directserverconnect.ui \
     mainwindow.ui \
     scanwindow.ui
 

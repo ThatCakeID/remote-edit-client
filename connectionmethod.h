@@ -15,6 +15,9 @@ public:
     explicit ConnectionMethod(QWidget *parent = nullptr);
     ~ConnectionMethod();
 
+private slots:
+    void on_direct_button_clicked();
+
 private:
     Ui::ConnectionMethod *ui;
 };
