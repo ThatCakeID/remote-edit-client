@@ -3,6 +3,7 @@
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>
+#include <QFile>
 
 int main(int argc, char *argv[])
 {
@@ -19,6 +20,11 @@ int main(int argc, char *argv[])
     }
 
     MainWindow w;
+
+    QFile stylesheet("./stylesheet.qss");
+    stylesheet.open(QFile::ReadOnly);
+    QString setSheet = QLatin1String(stylesheet.readAll());
+    a.setStyleSheet(setSheet);
 
     w.show();
 
