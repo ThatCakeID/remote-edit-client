@@ -71,15 +71,37 @@
     </item>
     <item>
      <widget class="QPushButton" name="scan_button">
+      <property name="styleSheet">
+       <string notr="true">margin-right: 4px;
+margin-left: 4px;
+border-radius: 12px;
+background: gray;
+padding: 8px;
+color: white;</string>
+      </property>
       <property name="text">
        <string>Scan for servers</string>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QPushButton" name="direct_button">
+      <property name="styleSheet">
+       <string notr="true">margin-right: 4px;
+margin-left: 4px;
+border-radius: 12px;
+background: gray;
+padding: 8px;
+color: white;</string>
+      </property>
       <property name="text">
        <string>Connect to a server</string>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
