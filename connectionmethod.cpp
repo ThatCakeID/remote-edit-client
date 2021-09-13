@@ -1,13 +1,23 @@
 #include "connectionmethod.h"
 #include "ui_connectionmethod.h"
-#include "mainwindow.h"
-#include <QStackedWidget>
+#include "directserverconnect.h"
+#include "scanwindow.h"
+
+QWidget* directServerConnect;
+QWidget* scanForServers;
 
 ConnectionMethod::ConnectionMethod(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ConnectionMethod)
 {
     ui->setupUi(this);
+
+    directServerConnect = new DirectServerConnect();
+    scanForServers = new ScanWindow();
+
+    ui->stackedWidget->addWidget(directServerConnect);
+    ui->stackedWidget->addWidget(scanForServers);
+    ui->stackedWidget->setVisible(false);
 }
 
 ConnectionMethod::~ConnectionMethod()
@@ -17,5 +27,13 @@ ConnectionMethod::~ConnectionMethod()
 
 void ConnectionMethod::on_direct_button_clicked()
 {
-    // TUDO: Switch screen (impossible)
+    ui->stackedWidget->setVisible(true);
+    ui->stackedWidget->setCurrentWidget(directServerConnect);
 }
+
+void ConnectionMethod::on_scan_button_clicked()
+{
+    ui->stackedWidget->setVisible(true);
+    ui->stackedWidget->setCurrentWidget(scanForServers);
+}
+
