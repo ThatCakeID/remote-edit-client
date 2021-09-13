@@ -2,18 +2,22 @@ QPushButton
 {
     margin-right: 4px;
     margin-left: 4px;
-    border-radius: 12px;
-    background: gray;
-    padding: 8px;
+    border-radius: 2px;
+    background: #498A8B;
+    padding: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
     color: white;
+    border: 2px solid #509D9E;
 }
 
 QPushButton:hover:!pressed
 {
-    background: #E4E4E4;
+    background: #509D9E;
+    border: 1px solid #498A8B;
 }
 
 QPushButton:hover:pressed
 {
-    background: #464646;
+    background: #69C9CB;
 }

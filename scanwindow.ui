@@ -82,26 +82,7 @@
         <item>
          <widget class="QPushButton" name="scan_button">
           <property name="styleSheet">
-           <string notr="true">QPushButton
-{
-    margin-right: 4px;
-    margin-left: 4px;
-    border-radius: 12px;
-    background: gray;
-    padding: 8px;
-    color: white;
-}
-
-QPushButton:hover:!pressed
-{
-    background: #E4E4E4;
-	color: black;
-}
-
-QPushButton:hover:pressed
-{
-    background: #464646;
-}
+           <string notr="true">
 </string>
           </property>
           <property name="text">

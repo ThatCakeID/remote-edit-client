@@ -34,6 +34,18 @@
    </property>
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="leftMargin">
+      <number>10</number>
+     </property>
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <property name="rightMargin">
+      <number>10</number>
+     </property>
+     <property name="bottomMargin">
+      <number>10</number>
+     </property>
      <item>
       <spacer name="verticalSpacer_3">
        <property name="orientation">
@@ -135,33 +147,28 @@ margin-left: 2px;</string>
      <item>
       <widget class="QPushButton" name="pushButton">
        <property name="styleSheet">
-        <string notr="true">QPushButton
-{
-    margin-right: 4px;
-    margin-left: 4px;
-    border-radius: 12px;
-    background: gray;
-    padding: 8px;
-    color: white;
-	margin-bottom: 4px;
-}
-
-QPushButton:hover:!pressed
-{
-    background: #E4E4E4;
-	color: black;
-}
-
-QPushButton:hover:pressed
-{
-    background: #464646;
-}
-</string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>OK</string>
        </property>
       </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
      </item>
     </layout>
    </item>
