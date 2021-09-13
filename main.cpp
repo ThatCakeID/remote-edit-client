@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
     MainWindow w;
 
-    QFile stylesheet("./stylesheet.qss");
+    QFile stylesheet(":/stylesheet/stylesheet.qss");
     stylesheet.open(QFile::ReadOnly);
     QString setSheet = QLatin1String(stylesheet.readAll());
     a.setStyleSheet(setSheet);

@@ -35,16 +35,16 @@
    <item row="0" column="0">
     <layout class="QVBoxLayout" name="verticalLayout">
      <property name="leftMargin">
-      <number>6</number>
+      <number>10</number>
      </property>
      <property name="topMargin">
-      <number>6</number>
+      <number>10</number>
      </property>
      <property name="rightMargin">
-      <number>6</number>
+      <number>10</number>
      </property>
      <property name="bottomMargin">
-      <number>6</number>
+      <number>10</number>
      </property>
      <item>
       <widget class="QLabel" name="label">
@@ -95,27 +95,7 @@
      <item>
       <widget class="QPushButton" name="scan_button">
        <property name="styleSheet">
-        <string notr="true">QPushButton
-{
-    margin-right: 4px;
-    margin-left: 4px;
-    border-radius: 12px;
-    background: gray;
-    padding: 8px;
-    color: white;
-}
-
-QPushButton:hover:!pressed
-{
-    background: #E4E4E4;
-	color: black;
-}
-
-QPushButton:hover:pressed
-{
-    background: #464646;
-}
-</string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>Scan for servers</string>
@@ -128,28 +108,7 @@ QPushButton:hover:pressed
      <item>
       <widget class="QPushButton" name="direct_button">
        <property name="styleSheet">
-        <string notr="true">QPushButton
-{
-    margin-right: 4px;
-    margin-left: 4px;
-    border-radius: 12px;
-    background: gray;
-    padding: 8px;
-    color: white;
-}
-
-QPushButton:hover:!pressed
-{
-    background: #E4E4E4;
-	color: black;
-}
-
-QPushButton:hover:pressed
-{
-    background: #464646;
-}
-
-margin-bottom: 4px;</string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>Connect to a server</string>
@@ -158,6 +117,22 @@ margin-bottom: 4px;</string>
         <bool>true</bool>
        </property>
       </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
      </item>
     </layout>
    </item>
